@@ -34,10 +34,20 @@ clock = time.Clock()
 FPS = 60
 run = True 
 
+finish = False
+
+sprite1 = Player('png-clipart-football-ball-sport-monochrome.png',5, win_height-100,100,100, 10)
+
 while run:
     for e in event.get():
         if e.type == QUIT:
            run = False
 
+    if finish !=True:
+        window.fill(back)
+
+        sprite1.update()
+        sprite1.reset()
+    
     display.update()
     clock.tick(FPS)
