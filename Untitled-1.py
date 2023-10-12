@@ -36,7 +36,10 @@ run = True
 
 finish = False
 
-sprite1 = Player('png-clipart-football-ball-sport-monochrome.png',5, win_height-100,100,100, 10)
+sprite1 = Player('png-clipart-football-ball-sport-monochrome.png',200,200,65,40,40)
+sprite2 = Player('racket.png',30,200,15,100,150)
+sprite3 = Player('racket.png',520,200,15,100,150)
+
 
 while run:
     for e in event.get():
@@ -48,6 +51,12 @@ while run:
 
         sprite1.update()
         sprite1.reset()
+
+        sprite2.update()
+        sprite2.reset()
+
+        sprite3.update()
+        sprite3.reset()
     
     display.update()
     clock.tick(FPS)
